@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="section">
+        <h1 class="heading">CALCULATOR</h1>
+        <div class="container">
+        <div class="calculator">
+            <form>
+            <div class="box">
+                <div class="text">
+                    <input type="text" id="text-box" name="text">
+                </div>
+                <div class="row">
+                    <input type="button" id="button" value="AC" onclick="text.value = ''" class="operator">
+                    <input type="button" id="button" value="DE" onclick="text.value = text.value.toString().slice(0,-1)" class="operator">
+                    <input type="button" id="button" value="." onclick="text.value += '.'" class="operator">
+                    <input type="button" id="button" value="/" onclick="text.value += '/'" class="operator">
+                </div>
+                <div class="row">
+                    <input type="button" id="button" value="7" onclick="text.value += '7'">
+                    <input type="button" id="button" value="8" onclick="text.value += '8'">
+                    <input type="button" id="button" value="9" onclick="text.value += '9'">
+                    <input type="button" id="button" value="*" onclick="text.value += '*'" class="operator">
+                </div>
+                <div class="row">
+                    <input type="button" id="button" value="4" onclick="text.value += '4'">
+                    <input type="button" id="button" value="5" onclick="text.value += '5'">
+                    <input type="button" id="button" value="6" onclick="text.value += '6'">
+                    <input type="button" id="button" value="-" onclick="text.value += '-'" class="operator">
+                </div>
+                <div class="row">
+                    <input type="button" id="button" value="1" onclick="text.value += '1'">
+                    <input type="button" id="button" value="2" onclick="text.value += '2'">
+                    <input type="button" id="button" value="3" onclick="text.value += '3'">
+                    <input type="button" id="button" value="+" onclick="text.value += '+'" class="operator">
+                </div>
+                <div class="row">
+                    <input type="button" id="button" value="00" onclick="text.value += '00'">
+                    <input type="button" id="button" value="0" onclick="text.value += '0'">
+                    <input type="button" id="button" value="=" class="equal operator"  onclick="text.value = eval(text.value)">
+                </div>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
